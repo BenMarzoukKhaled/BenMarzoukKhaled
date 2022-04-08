@@ -76,7 +76,7 @@ if (isset($_POST)) {
             <form method="POST" class="border shadow p-3 rounded" style="width: 450px;">
                 <h1>Connexion</h1>
                 <div class="mb-3">
-                    <label for="username" class="form-label">Pseudo</label>
+                    <label for="username" class="form-label">Login</label>
                     <input type="text" class="form-control" required="required" name="pseudo">
                 </div>
                 <div class="mb-3">

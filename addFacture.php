@@ -1,15 +1,4 @@
-<?php
-session_start();
-if (!isset($_SESSION['pseudo'])) {
-    header('Location:login.php');
-}
-$nom_du_serveur = "localhost";
-$nom_de_la_base = "psr";
-$nom_utilisateur = "root";
-$passe = "";
-
-$cam = mysqli_connect($nom_du_serveur, $nom_utilisateur, $passe, $nom_de_la_base);
-
+<?php include("connexionDataBase.php");
 if (isset($_POST['submit'])) {
 
     $opp = $_POST['opp'];
@@ -71,8 +60,13 @@ if (isset($_POST['submit'])) {
                     <li class="nav-item active">
                         <a href="display.php" class="nav-link active">Afficher les factures</a>
                     </li>
-                    <li class="nav-item active">
-                        <a href="amount.php" class="nav-link active">Montant des factures</a>
+                    <li class="nav-item dropdown">
+                        <a href="#" style="color: white;" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Factures</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a href="amount.php" class="dropdown-item">Montant des factures</a></li>
+                            <li><a href="stats.php" class="dropdown-item">Pv en attente</a></li>
+                            <li><a href="paiement.php" class="dropdown-item">Paiement en attente</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item active">
                         <a href="disconnect.php" class="nav-link active">Déconnexion</a>

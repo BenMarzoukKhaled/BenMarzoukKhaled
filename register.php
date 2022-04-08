@@ -111,7 +111,7 @@ if (isset($_POST['pseudo']) && isset($_POST['email']) && isset($_POST['password'
             <form method="POST" class="border shadow p-3 rounded" style="width: 450px;">
                 <h1>Inscription</h1>
                 <div class="mb-3">
-                    <label for="username" class="form-label">Pseudo</label>
+                    <label for="username" class="form-label">Login</label>
                     <input type="text" name="pseudo" class="form-control" placeholder="Pseudo" required="required" autocomplete="off">
                 </div>
                 <div class="mb-3">
